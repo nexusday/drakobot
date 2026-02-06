@@ -7,7 +7,7 @@ let handler = async (m, { usedPrefix }) => {
     ``,
     `Bot: ${nombreBot}`,
     ``,
-    `-- 🄲🄾🄼🄰🄽🄳🄾🅂 🄳🄸🅂🄿🄾🄽🄸🄱🄻🄴🅂 --\n`,
+    `-- COMANDOS --\n`,
     ...(custom.length ? custom.map(cmd => `${usedPrefix}${cmd}\n`) : ['(ninguno)']),
   ].join('\n')
 

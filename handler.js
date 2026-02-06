@@ -112,6 +112,8 @@ const isOwner = isROwner || m.fromMe
 const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)  
 const isPrems = isROwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || _user?.prem == true  
 
+if (!global.grupos && m.isGroup && !isOwner) return  
+
 if (opts['queque'] && m.text && !(isMods || isPrems)) {  
   let queque = this.msgqueque, time = 1000 * 5  
   const previousID = queque[queque.length - 1]  
@@ -259,9 +261,6 @@ for (let plugin of processedPlugins) {
     }
     
     const allowedPrivateCommands = ['qr', 'code', 'setbotname', 'setbotimg', 'setautoread']
-    if (!m.isGroup && !allowedPrivateCommands.includes(command) && !isOwner) {
-      return 
-    }
     
     if (m.isGroup && global.db.data.botGroups && global.db.data.botGroups[m.chat] === false) {
       const alwaysAllowedCommands = ['grupo']

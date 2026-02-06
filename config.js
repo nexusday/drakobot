@@ -3,21 +3,25 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 
 global.owner = [
-  ['51957715814', 'Drako', true],
+  ['51969754673', 'U -Streaming', true],
+  ['51901437507', 'Sunkovv', true],
 ]
 
 
 global.ownerLid = [
-  ['77206885785728', 'Drako', true],
+  ['127114623864833', 'U -Streaming', true],
+  ['114263544885392', 'Sunkovv', true],
 ]
 
 global.sessions = 'Sessions'
 global.bot = 'Serbot' 
 global.AFBots = true
 
+global.grupos = false
+
 global.packname = ''
-global.namebot = '𝐋𝐀 𝐃𝐑𝐀𝐊𝐎 𝐒𝐇𝐎𝐏'
-global.author = 'Drako'
+global.namebot = 'U - STREAMING'
+global.author = 'U - STREAMING'
 global.moneda = ''
 
 
